@@ -1,22 +1,23 @@
-const form = document.getElementById("monFormulaire");
+console.log("javascript fonctionne !");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+const btnMessage = document.getElementById("btnMessage");
+const message = document.getElementById("message");
+btnMessage.addEventListener("click", function () {
+    message.textContent = "Vous avez cliqué sur le bouton !";
+});
 
-    // Récupérer les valeurs
-    const nom = document.getElementById("nom").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const nom = document.getElementById("nom");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const button = document.querySelector(".form button");
 
-    // Créer un objet
-    const utilisateur = {
-        nom: nom,
-        email: email,
-        password: password
-    };
-
-    // Enregistrer dans localStorage
-    localStorage.setItem("utilisateur", JSON.stringify(utilisateur));
-
-    alert("Informations enregistrées dans Local Storage !");
+button.addEventListener("click", function () {
+    if (nom.value === "" || email.value === "" || password.value === "") {
+        alert("Veuillez remplir tous les champs !");
+    } else {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push({ nom: nom.value, email: email.value, password: password.value });
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Inscription réussie !");
+    }
 });

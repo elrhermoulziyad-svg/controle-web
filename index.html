@@ -1,18 +1,31 @@
-<section id="formulaire">
-    <h2>Inscription</h2>
-
-    <form id="monFormulaire">
-
-        <label>Nom :</label><br>
-        <input type="text" id="nom" placeholder="Entrez votre nom"><br><br>
-
-        <label>Email :</label><br>
-        <input type="email" id="email" placeholder="Entrez votre email"><br><br>
-
-        <label>Mot de passe :</label><br>
-        <input type="password" id="password" placeholder="Entrez votre mot de passe"><br><br>
-
-        <button type="submit">Enregistrer</button>
-
-    </form>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Bienvenue sur mon portfolio</h1>
+    <p>je suis étudiant en développement web.</p>
+    <a href="https://github.com" target="_blank">voir mon Github</a>
+<nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button id="btnMessage">Cliquez-ici</button>
+    <p id="message"></p>
+    <div class="form">
+        <h1>Sign Up</h1>
+        <input id="nom" placeholder="Votre nom" type="text" >
+        <input id="email" placeholder="Votre Email" type="email" >
+        <input id="password" placeholder="Mot de passe" type="password">
+        <button type="submit">S'inscrire</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
